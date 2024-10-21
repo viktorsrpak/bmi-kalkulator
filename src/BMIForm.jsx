@@ -1,9 +1,6 @@
-import { createSignal } from "solid-js"
+import { createSignal } from "solid-js";
 
-export default BMI;
-
-
-const BMI = (props) => {
+const BMIForm = (props) => {
     const [visina, setVisina] = createSignal("");
     const [tezina, setTezina] = createSignal("");
     const [godine, setGodine] = createSignal("");
@@ -30,8 +27,6 @@ const BMI = (props) => {
             </div>
             <div>
                 <label>Spol(muško/žensko): </label>
-
-
                 <select value={spol()} onInput={(e) => setSpol(e.target.value)}>
                     <option value="musko">Muško</option>
                     <option value="zensko">Žensko</option>
@@ -42,4 +37,4 @@ const BMI = (props) => {
     );
 };
 
-
+export default BMIForm;

@@ -8,7 +8,7 @@ function App() {
       <h1>BMI Kalkulator</h1>
       <BMI_Kalkulator />
     </div>
-  )
+  );
 }
 
 export default App;
