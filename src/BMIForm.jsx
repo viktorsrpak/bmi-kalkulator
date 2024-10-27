@@ -8,6 +8,13 @@ const BMIForm = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // Validacija unosa
+        if (visina() <= 0 || tezina() <= 0 || godine() <= 0) {
+            alert("Visina, težina i godine moraju biti pozitivni brojevi.");
+            return;
+        }
+
         props.onSubmit({ visina: visina(), tezina: tezina(), godine: godine(), spol: spol() });
     };
 
@@ -15,15 +22,15 @@ const BMIForm = (props) => {
         <form onSubmit={handleSubmit}>
             <div>
                 <label>Visina(cm): </label>
-                <input type="number" value={visina()} onInput={(e) => setVisina(e.target.value)} required />
+                <input type="number" value={visina()} onInput={(e) => setVisina(e.target.value)} required min="0" />
             </div>
             <div>
                 <label>Težina(kg): </label>
-                <input type="number" value={tezina()} onInput={(e) => setTezina(e.target.value)} required />
+                <input type="number" value={tezina()} onInput={(e) => setTezina(e.target.value)} required min="0" />
             </div>
             <div>
                 <label>Godine: </label>
-                <input type="number" value={godine()} onInput={(e) => setGodine(e.target.value)} required />
+                <input type="number" value={godine()} onInput={(e) => setGodine(e.target.value)} required min="0" />
             </div>
             <div>
                 <label>Spol(muško/žensko): </label>

@@ -1,6 +1,6 @@
 const Rezultat = (props) => {
     return (
-        <div>
+        <div className="result">
             {props.bmi ? (
                 <div>
                     <h2>Vaš BMI je: {props.bmi}</h2>

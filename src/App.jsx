@@ -4,7 +4,7 @@ import BMI_Kalkulator from './BMI_Kalkulator';
 
 function App() {
   return (
-    <div>
+    <div className={styles.container}>
       <h1>BMI Kalkulator</h1>
       <BMI_Kalkulator />
     </div>
