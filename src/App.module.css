@@ -17,12 +17,14 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 300px;
+  gap: 20px;
+  font-weight: bold;
   padding: 20px;
-  background-color: #f7f7f7;
-  border: 1px solid #ddd;
+  width: 500px;
+  background-color: #e4e4e4;
+  border: 1px solid #000000;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 /* oznake */
@@ -38,6 +40,9 @@ select {
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  float: right;
+  clear: both;
+  background-color: #ffffff;
 }
 
 /* gumb */
